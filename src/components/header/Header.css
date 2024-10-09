@@ -3,7 +3,7 @@
   background: linear-gradient(#efe69a, #dbc78b);
 }
 
-.row-wrapper {
+.header .row-wrapper {
   width: 1440px;
   margin: 0 auto;
   display: flex;
@@ -195,7 +195,7 @@
   .header {
     padding: 1rem 3%;
   }
-  .row-wrapper {
+  .header .row-wrapper {
     width: 100%;
   }
 }

@@ -9,7 +9,7 @@ import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import { EffectFade, Navigation, Pagination } from "swiper/modules";
+import { EffectFade, Autoplay, Pagination } from "swiper/modules";
 
 import slider1 from "../../../assets/watch-slider1.png";
 import slider2 from "../../../assets/watch-slider2.png";
@@ -27,11 +27,16 @@ const Slider = () => {
       <Swiper
         spaceBetween={30}
         effect={"fade"}
+        loop={true}
         pagination={{
           clickable: true,
         }}
-        modules={[EffectFade, Navigation, Pagination]}
+        modules={[EffectFade, Autoplay, Pagination]}
         className="swiper"
+        autoplay={{
+          delay: 2000,
+          disableOnInteraction: false,
+        }}
       >
         <>
           {SliderData.slides.map((slide, index) => (
