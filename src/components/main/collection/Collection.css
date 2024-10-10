@@ -1,0 +1,125 @@
+.collection {
+  padding: 3rem 0%;
+}
+
+.collection .title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.collection .title h2 {
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+
+.collection .box-container {
+  width: 1440px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 25px;
+}
+
+.collection .box-container .box .image {
+  background-color: #363636;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.collection .box-container .box .image img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.collection .box-container .box .image img:hover {
+  transform: scale(1.1);
+}
+
+.collection .box-container .box .icons {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.collection .box-container .box .icons .wishlist i {
+  margin-bottom: 0.5rem;
+}
+
+.collection .box-container .box .icons .wishlist i,
+.collection .box-container .box .icons .compare i {
+  font-size: 1rem;
+  background-color: #1f1f1f;
+  color: var(--color-white);
+  padding: 8px;
+  border-radius: 30px;
+}
+
+.collection .box-container .box .icons .wishlist:hover i,
+.collection .box-container .box .icons .compare:hover i {
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+
+.collection .box-container .box .icons .compare {
+  position: absolute;
+  right: -50px;
+}
+
+.collection .box-container .box:hover .icons .compare {
+  right: 0;
+}
+
+.collection .box-container .box .image .actions {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  bottom: -100px;
+  transition: bottom 0.4s ease;
+}
+
+.collection .box-container .box:hover .image .actions {
+  bottom: 30px;
+}
+
+.collection .box-container .box .image .actions .quickview a,
+.collection .box-container .box .image .actions .cart a {
+  padding: 7px 20px;
+  background: #1f1f1f;
+  color: var(--color-white);
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.collection .box-container .box .image .actions .quickview a:hover,
+.collection .box-container .box .image .actions .cart a:hover {
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+
+.collection .box-container .box .info .name h3 a {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--color-white);
+}
+
+.collection .box-container .box .info .price h5 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* responsiveness */
+
+@media (max-width: 1440px) {
+  .collection {
+    padding: 3rem 4%;
+  }
+  .collection .box-container {
+    width: 100%;
+  }
+}
